@@ -670,7 +670,8 @@ SetDefaultSettings(PSETTINGS pSettings,
     pSettings->TargetPrinter    = 0;
     
     //set a default..
-    pSettings->OEM     = OEM_ENDURO;
+//    pSettings->OEM     = OEM_ENDURO;
+    pSettings->OEM     = OEM_AOTA;
 	if (pSettings->Printer)
 	{
 		switch (pSettings->Printer)
@@ -780,8 +781,10 @@ SetDefaultSettings(PSETTINGS pSettings,
 	}
 	else
 	{
-		pSettings->Printer = ENDURO;
-		pSettings->OEM     = OEM_ENDURO;
+		//pSettings->Printer = ENDURO;
+		//pSettings->OEM     = OEM_ENDURO;
+		pSettings->Printer = ALTO;
+		pSettings->OEM     = OEM_AOTA;
 
 		pSettings->nPrintSpeed = UICBVAL_DefaultSpeed;
 		pSettings->nColourCorrection = 1;
@@ -882,7 +885,7 @@ fprintf(stderr, "L898:CATULTRA MODEL! %u\n",settings->Printer);
 
 	SetDefaultSettings(settings, FALSE);
 
-	settings->OEM = OEM_ENDURO;
+	settings->OEM = OEM_AOTA;
 
 	settings->Duplex							 = getOptionChoiceIndex("UTDuplex"                  , ppd);
 	

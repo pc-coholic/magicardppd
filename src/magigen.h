@@ -142,8 +142,8 @@ enum {FRONT, BACK};
 
 enum {  
         //Printer Family assignment set to OEM value in devmode
-        OEM_RIO=1, 
-        OEM_AOTA,
+        OEM_RIO, 
+        OEM_AOTA=1,
         OEM_ENDURO,
         OEM_OPTIMA
 };
